@@ -22,24 +22,27 @@ body::before {
 .container {
   height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
   color: #fff;
+}
+.subscriptionSection {
+  display: flex;
+  flex-direction: column;
   margin: 0 0 0 10rem;
   gap: 1rem;
   position: relative;
 }
-.container p:nth-child(1) {
+.subscriptionSection p:nth-child(1) {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
 }
-.container h2 {
+.subscriptionSection h2 {
   font-weight: 600;
   font-size: 2rem;
   line-height: 1.2;
 }
-.container h2 span {
+.subscriptionSection h2 span {
   display: block;
 }
 form {
@@ -71,7 +74,7 @@ form button i {
   color: #ff3333;
   border-radius: 0.2rem;
   position: absolute;
-  bottom: 7rem;
+  bottom: -3rem;
   left: -25rem;
   transition: left 0.3s;
 }
@@ -83,72 +86,14 @@ form button i {
 }
 
 /*  Media queries */
-@media only screen and (max-width: 1280px) {
-  .error {
-    bottom: 13rem;
-  }
-}
-@media only screen and (max-width: 1024px) {
-  .error {
-    bottom: 30rem;
-  }
-}
-@media only screen and (max-width: 820px) {
-  .error {
-    bottom: 25rem;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .error {
-    bottom: 20rem;
-  }
-}
-@media only screen and (max-width: 412px) {
-  .error {
-    bottom: 16rem !important;
-  }
-}
-@media only screen and (max-width: 360px) {
-  .error {
-    bottom: 9rem !important;
-  }
-}
-@media only screen and (max-width: 430px) {
-  .error {
-    bottom: 15rem !important;
-  }
-}
-@media only screen and (max-width: 390px) {
-  .error {
-    bottom: 7rem !important;
-  }
-}
+
 @media only screen and (max-width: 530px) {
-  .container {
+  .subscriptionSection {
     width: 50%;
     margin: auto;
   }
   form {
     position: relative;
     width: 13rem;
-  }
-  .error {
-    bottom: 3rem;
-  }
-}
-
-@media only screen and (max-width: 300px) {
-  .container {
-    margin: auto;
-  }
-  form {
-    position: relative;
-    width: 10rem;
-  }
-  form button {
-    width: 25%;
-  }
-  .error {
-    bottom: 5rem;
   }
 }

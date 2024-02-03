@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Mukta", sans-serif;
+}
+body {
+  background-image: url("./background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.8;
+  z-index: -1;
+}
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #fff;
+  margin: 0 0 0 10rem;
+  gap: 1rem;
+  position: relative;
+}
+.container p:nth-child(1) {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.container h2 {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+.container h2 span {
+  display: block;
+}
+form {
+  position: relative;
+  width: 18rem;
+}
+form input[type="email"] {
+  outline: none;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  width: 100%;
+  font-family: "Mukta", sans-serif;
+}
+form button {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 18%;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background-color: #228824;
+}
+form button i {
+  font-size: 1.3rem;
+  color: white;
+}
+.error {
+  color: #ff3333;
+  border-radius: 0.2rem;
+  position: absolute;
+  bottom: 7rem;
+  left: -25rem;
+  transition: left 0.3s;
+}
+.error i {
+  color: green;
+}
+.show-error {
+  left: 0rem;
+}
